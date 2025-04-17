@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="cart_style.css">
+</head>
+
+<body class="">
+
+    <div class="container">
+        <header>
+            <h1>Your Shopping Cart</h1>
+            <div class="shopping">
+                <img src="images/shopping.svg">
+                <span class="quantity">0</span>
+            </div>
+        </header>
+        <div class="list">
+
+        </div>
+    </div>
+    <!-- <div id="overlay" onclick="off()">
+        <div class="textbox">Thank You for purchasing :) </div>
+    </div> -->
+    <div class="card">
+        <h1>Card</h1>
+        <ul class="listCard">
+        </ul>
+        <div class="checkOut">
+            <div class="total" onclick="checkout()">
+                <button>Checkout Total: 0</button>
+            </div>
+            <div class="closeShopping">Close</div>
+        </div>
+    </div>
+
+    <script >
+
+        function checkout() {
+            // Retrieve the name, total, and note
+            var name = prompt("Enter your name:");
+
+            // Calculate the total here based on your logic
+            var note = prompt("Enter a note:");
+
+            var total = ShowTotal() ;
+
+            // Send the data to the server
+            var xhr = new XMLHttpRequest();
+            xhr.open("POST", "Cart_SDB.php", true);
+            xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    alert("Order stored successfully!");
+
+                }
+            };
+            xhr.send("name=" + encodeURIComponent(name) + "&total=" + encodeURIComponent(total) + "&note=" + encodeURIComponent(note));
+        }
+        
+    </script>
+
+    <script src="cart.js"></script>
+
+</body>
+
+</html>

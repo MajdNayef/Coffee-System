@@ -1,0 +1,65 @@
+body {
+  background-color: #f5f5f5;
+  font-family: Arial, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-image: url(images/coffeeBg.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.container {
+  background-color: #ffffff;
+  opacity: 0.9;
+  border-radius: 10px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  padding: 40px;
+  width: 300px;
+}
+
+.login-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.login-form input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
+.submit-btn {
+  background-color: #cb925d;
+  color: #ffffff;
+  border: none;
+  padding: 8px 20px; /* Adjust the padding values as needed */
+  font-size: 14px; /* Adjust the font size as needed */
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: block; /* Make the button a block element */
+  margin: 0 auto; /* Center the button horizontally */
+}
+
+.submit-btn:hover {
+  background-color: #384937;
+}
+
+.toggle-option {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.toggle-option p {
+  margin-bottom: 0;
+}
+
+.toggle-option span {
+  color: blue;
+  cursor: pointer;
+  text-decoration: underline;
+}
